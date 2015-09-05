@@ -1,5 +1,5 @@
 # addwpa
-Set WPA key & SSID from /boot/addwpa.txt file. Espesially good for Raspberry Pi.
+Add a pair of wpa key & SSID from /boot/addwpa.txt file, good for Raspberry Pi because this file can be edit by ordinaly PC.
 
 # What does this script do?
 This script read a pair of setting value of ssid & wpa key from /boot/addwpa.txt file, and add these by wpa_cli. Typically, intended to be called from rc.local.
@@ -13,7 +13,7 @@ This script read a pair of setting value of ssid & wpa key from /boot/addwpa.txt
 sudo nano /etc/rc.local
 ```
 
-add following line before "end."
+add following line before "exit 0"
 
 ```bash:rc.local
 /home/pi/addwpa.sh
@@ -31,6 +31,3 @@ for example:
 SSID-FOR-EXAMPLE
 WPAKEY1234
 ```
-# Raspberry PI /boot folder can be access by PC.
-You can write /boot/addwpa.txt directory by PC seeting Raspbian SD card on. So, before network setting, you can prepare /boot/addwpa.txt by PC.
-

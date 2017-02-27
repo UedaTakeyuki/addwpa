@@ -20,6 +20,6 @@ if [ -e $addwpafile ]; then # exist addwpa.txt file then:
     wpa_cli save_config
     # remove addwpa.txt
     rm $addwpafile
-    # reboot
+    reboot
   fi
 fi
